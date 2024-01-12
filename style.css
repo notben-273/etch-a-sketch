@@ -28,6 +28,10 @@ body {
     flex-direction: column;
 }
 
+button {
+    background-color: white;
+}
+
 #grid-options {
     display: flex;
     flex-direction: column;
