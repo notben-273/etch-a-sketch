@@ -7,13 +7,13 @@ const clear = document.querySelector("#clear");
 const eraser = document.querySelector("#eraser");
 const black = document.querySelector("#black");
 const rainbow = document.querySelector("#rainbow");
+
 container.addEventListener("mousedown", () => mouseHeld = true);
 container.addEventListener("mouseup", () => mouseHeld = false);
 
 let mouseHeld = false;
 let currentSize = 16;
-let currentColor = "Black"
-let isRainbow = false;
+let currentColor = "000000"
 
 document.addEventListener('DOMContentLoaded', () => createGrid(currentSize));
 
@@ -30,21 +30,28 @@ eraser.addEventListener("click", () => {
     eraser.style.backgroundColor = "lightgreen";
     black.style.backgroundColor = "White";
     rainbow.style.backgroundColor = "White";
-    changeColor("White")
+    changeColor("ffffff");
 });
 
 black.addEventListener("click", () => {
     eraser.style.backgroundColor = "White";
     black.style.backgroundColor = "lightgreen";
     rainbow.style.backgroundColor = "White";
-    changeColor("Black")
+    changeColor("000000");
 });
 
 rainbow.addEventListener("click", () => {
     eraser.style.backgroundColor = "White";
     black.style.backgroundColor = "White";
     rainbow.style.backgroundColor = "lightgreen";
-    isRainbow = true
+    isRainbow = true;
+});
+
+shading.addEventListener("click", () => {
+    eraser.style.backgroundColor = "lightgreen";
+    black.style.backgroundColor = "White";
+    rainbow.style.backgroundColor = "White";
+    isShading = true;
 });
 
 function createGrid(size) {
@@ -93,6 +100,6 @@ function createGrid(size) {
 }
 
 function changeColor(color) {
-    currentColor = color;
+    currentColor = "#" + color;
     isRainbow = false;
 }
