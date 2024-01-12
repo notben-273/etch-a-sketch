@@ -8,9 +8,24 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <div id="header">Header</div> -->
-    <button id="createButton">Create Grid</button>
-    <div id="container"></div>
-    <!-- <div id="footer">Made by Ben Gething 2024</div> -->
+    <div id="header">Etch-A-Sketch</div>
+    <div id="main-section">
+        <div id="controls">
+            <div id="buttons">
+                <button id="black">Black</button>
+                <button id="rainbow">Rainbow</button>
+                <button id="shading">Shading</button>
+                <button id="eraser">Eraser</button>
+                <button id="clear">Clear</button>
+            </div>
+            <div id="grid-options">
+                <div id="grid-size"></div>
+                <input type="range" id="size-slider" min="4" max="32" step="2" value="16">
+                <button id="createButton">Create New Canvas</button>
+            </div>
+        </div>
+        <div id="container"></div>
+    </div>
+    <div id="footer">Copyright © 2024 notben-273</div>
 </body>
 </html>
